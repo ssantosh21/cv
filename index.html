@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santosh Kumar Dubey - Resume</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 11px;
+            line-height: 1.5;
+            color: #1a1a1a;
+            background: #fff;
+            padding: 30px 40px;
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #0066cc;
+            margin-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        
+        .title-tagline {
+            font-size: 13px;
+            font-weight: 500;
+            color: #0066cc;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+        
+        .contact {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            font-size: 11px;
+            color: #444;
+        }
+        
+        .contact a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .contact span::before {
+            content: "•";
+            margin-right: 8px;
+            color: #999;
+        }
+        
+        .contact span:first-child::before {
+            display: none;
+        }
+        
+        /* Summary */
+        .summary {
+            margin-bottom: 20px;
+            padding: 12px 15px;
+            background: #f8f9fa;
+            border-left: 3px solid #0066cc;
+        }
+        
+        .summary p {
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Sections */
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #0066cc;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 6px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+        
+        /* Experience */
+        .job {
+            margin-bottom: 16px;
+            page-break-inside: avoid;
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 4px;
+        }
+        
+        .job-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .job-date {
+            font-size: 10px;
+            color: #666;
+            white-space: nowrap;
+        }
+        
+        .job-company {
+            font-size: 11px;
+            color: #0066cc;
+            margin-bottom: 4px;
+        }
+        
+        .job-client {
+            font-size: 10px;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 4px;
+        }
+        
+        .job-desc {
+            color: #444;
+            margin-bottom: 6px;
+        }
+        
+        .company-block {
+            border-left: 3px solid #0066cc;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .job-progression {
+            font-size: 10px;
+            color: #0066cc;
+            font-style: italic;
+            margin-bottom: 10px;
+            padding: 4px 8px;
+            background: #f0f7ff;
+            border-radius: 4px;
+            display: inline-block;
+        }
+        
+        .role-section {
+            margin-bottom: 12px;
+        }
+        
+        .role-section h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+            padding-bottom: 3px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .job-achievements {
+            margin: 6px 0;
+            padding-left: 18px;
+        }
+        
+        .job-achievements li {
+            color: #444;
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+        
+        .job-achievements li strong {
+            color: #1a1a1a;
+        }
+        
+        .job-tech {
+            font-size: 10px;
+            color: #666;
+            background: #f5f5f5;
+            padding: 4px 8px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+        
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        
+        .skill-category h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+        }
+        
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+        }
+        
+        .skill-tag {
+            font-size: 10px;
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #444;
+        }
+        
+        /* AWS Services */
+        .aws-services {
+            background: #fff4e6;
+            border: 1px solid #ffd699;
+            padding: 10px;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+        
+        .aws-services h4 {
+            font-size: 11px;
+            font-weight: 600;
+            color: #cc7a00;
+            margin-bottom: 6px;
+        }
+        
+        .aws-services p {
+            font-size: 10px;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        /* Certifications */
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #e8e8e8;
+        }
+        
+        .cert-logo {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+        
+        .cert-badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            filter: grayscale(100%);
+        }
+        
+        .cert-badge svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .aws-badge {
+            background: linear-gradient(135deg, #999 0%, #777 100%);
+            color: #333;
+        }
+        
+        .redhat-badge {
+            background: linear-gradient(135deg, #999 0%, #777 100%);
+            color: #333;
+        }
+        
+        .oracle-badge {
+            background: linear-gradient(135deg, #999 0%, #777 100%);
+            color: #333;
+        }
+        
+        .cert-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+        
+        .cert-name {
+            font-weight: 500;
+            font-size: 8px;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+        
+        .cert-year {
+            font-size: 8px;
+            color: #666;
+        }
+        
+        .cert-aws {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+        
+        .cert-aws .cert-name {
+            color: #555;
+        }
+        
+        .cert-redhat {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+        
+        .cert-redhat .cert-name {
+            color: #555;
+        }
+        
+        .cert-oracle {
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+        }
+        
+        .cert-oracle .cert-name {
+            color: #555;
+        }
+        
+        /* Education */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .edu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .edu-degree {
+            font-weight: 500;
+            color: #1a1a1a;
+        }
+        
+        .edu-school {
+            font-size: 10px;
+            color: #666;
+        }
+        
+        .edu-year {
+            color: #666;
+            font-size: 10px;
+        }
+        
+        /* Beyond Work */
+        .beyond-work {
+            background: #f8f9fa;
+            padding: 12px 15px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .beyond-work p {
+            color: #555;
+            font-size: 10px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        /* AI Production Section */
+        .ai-production {
+            background: #f0f7ff;
+            padding: 10px 14px;
+            border-radius: 4px;
+            border-left: 3px solid #0066cc;
+            font-size: 10px;
+        }
+        
+        .ai-production p {
+            margin: 0;
+            color: #333;
+            line-height: 1.5;
+        }
+        
+        .highlight-feature {
+            background: #e6f3ff;
+            padding: 1px 4px;
+            border-radius: 3px;
+            font-weight: 500;
+            color: #0055aa;
+        }
+        
+        /* Agentic Tools */
+        .agentic-tools {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        
+        .tool-item {
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border: 1px solid #e8e8e8;
+            font-size: 9px;
+            color: #444;
+            line-height: 1.4;
+        }
+        
+        .tool-item strong {
+            color: #1a1a1a;
+        }
+        
+        /* Core Strengths */
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+        
+        .strength-item {
+            display: flex;
+            gap: 8px;
+            padding: 10px;
+            background: #f8f9fa;
+            border: 1px solid #e8e8e8;
+            border-radius: 4px;
+        }
+        
+        .strength-icon {
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        
+        .strength-text strong {
+            display: block;
+            font-size: 10px;
+            color: #1a1a1a;
+            margin-bottom: 1px;
+        }
+        
+        .strength-text span {
+            font-size: 8px;
+            color: #666;
+            line-height: 1.3;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                padding: 15px;
+                font-size: 9.5px;
+            }
+            
+            .summary {
+                background: none;
+                border-left: 2px solid #0066cc;
+            }
+            
+            .strength-item {
+                background: none;
+                border: 1px solid #ddd;
+            }
+            
+            .skill-category, .cert-item {
+                background: none;
+                border: 1px solid #ddd;
+            }
+            
+            .cert-aws {
+                background: none;
+                border: 1px solid #cc7a00;
+            }
+            
+            .cert-badge {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            
+            
+            .aws-services {
+                background: none;
+                border: 1px solid #ddd;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .company-block {
+                page-break-inside: avoid;
+            }
+            
+            .job-progression {
+                background: none;
+                border: 1px solid #0066cc;
+            }
+        }
+        
+        @page {
+            margin: 0.5in;
+            size: auto;
+        }
+        
+        @media print {
+            @page {
+                margin: 0.5in;
+            }
+            
+            html, body {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <h1 class="name">SANTOSH KUMAR DUBEY</h1>
+        <div class="title-tagline">Technical Architect | Engineering Leadership & Platform Ownership | AI-Augmented Software Architect</div>
+        <div class="contact">
+            <span>Gurgaon, India</span>
+            <span>+91 8506915015</span>
+            <span><a href="mailto:ssantosh21@gmail.com">ssantosh21@gmail.com</a></span>
+            <span><a href="https://www.linkedin.com/in/ssantosh21" target="_blank">linkedin.com/in/ssantosh21</a></span>
+        </div>
+    </header>
+    
+    <!-- Summary -->
+    <div class="summary">
+        <p>
+            <strong>Platform Architect</strong> with 12+ years designing mission-critical systems. 
+            Scaled Limitless platform to <strong>40,000+ users</strong> processing <strong>millions of requests globally with 99.99% uptime</strong>. 
+            Pioneer in <strong>AI integration</strong> (classification, summarization, suggestion engines) and <strong>agentic development</strong> using Claude & GPT with precise specifications. 
+            Complete <strong>platform ownership</strong> — from serverless architecture to security audits & penetration testing. 
+            Led distributed teams remotely for 8+ years with strong code review discipline and knowledge sharing culture.
+        </p>
+    </div>
+    
+    <!-- AI Implementation (Production) -->
+    <section class="section">
+        <h2 class="section-title">AI Implementation — Production</h2>
+        <div class="ai-production">
+            <p><strong>Limitless Technology:</strong> Integrated ChatGPT API into production platform for <span class="highlight-feature">intelligent text classification</span>, <span class="highlight-feature">context summarization</span>, and <span class="highlight-feature">smart suggestion engine</span> — powering real user-facing features at scale.</p>
+        </div>
+    </section>
+    
+    <!-- Agentic Development -->
+    <section class="section">
+        <h2 class="section-title">Agentic Development — Powered by AI</h2>
+        <div class="agentic-tools">
+            <div class="tool-item"><strong>Claude Opus & Sonnet</strong> — Complex reasoning, architecture design, code generation</div>
+            <div class="tool-item"><strong>Cursor AI</strong> — Accelerated development with in-depth agent control</div>
+            <div class="tool-item"><strong>Spec-Driven Approach</strong> — Precise specifications & guardrails to prevent hallucination and tech debt</div>
+        </div>
+    </section>
+    
+    <!-- Core Strengths -->
+    <section class="section">
+        <h2 class="section-title">Core Strengths</h2>
+        <div class="strengths-grid">
+            <div class="strength-item">
+                <div class="strength-icon">💰</div>
+                <div class="strength-text">
+                    <strong>Cost Optimization</strong>
+                    <span>Right-sizing infrastructure, identifying over/under-provisioned resources, reducing cloud spend without compromising performance</span>
+                </div>
+            </div>
+            <div class="strength-item">
+                <div class="strength-icon">⚡</div>
+                <div class="strength-text">
+                    <strong>High-Throughput Architecture</strong>
+                    <span>Designing serverless systems for maximum throughput with minimal latency and optimal resource utilization</span>
+                </div>
+            </div>
+            <div class="strength-item">
+                <div class="strength-icon">🔒</div>
+                <div class="strength-text">
+                    <strong>Security & Compliance</strong>
+                    <span>Penetration testing, security audits, IAM best practices, encryption, and zero-trust architecture</span>
+                </div>
+            </div>
+            <div class="strength-item">
+                <div class="strength-icon">🔄</div>
+                <div class="strength-text">
+                    <strong>Self-Healing Systems</strong>
+                    <span>Architecting fault-tolerant components with automatic recovery, data integrity repair scripts, and proactive alerting</span>
+                </div>
+            </div>
+            <div class="strength-item">
+                <div class="strength-icon">🚀</div>
+                <div class="strength-text">
+                    <strong>E2E DevOps & CI/CD</strong>
+                    <span>Zero-touch deployments, automated testing pipelines, infrastructure as code</span>
+                </div>
+            </div>
+            <div class="strength-item">
+                <div class="strength-icon">👥</div>
+                <div class="strength-text">
+                    <strong>Engineering Leadership</strong>
+                    <span>Leading high-performance remote teams, setting coding standards, defining testing approaches, mentoring engineers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Certifications -->
+    <section class="section">
+        <h2 class="section-title">Certifications</h2>
+        <div class="cert-grid">
+            <div class="cert-item cert-aws">
+                <div class="cert-badge aws-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.415-.287-.806-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167z"/></svg>
+                </div>
+                <div class="cert-info">
+                    <span class="cert-name">AWS Certified Developer – Associate</span>
+                    <span class="cert-year">2020</span>
+                </div>
+            </div>
+            <div class="cert-item cert-aws">
+                <div class="cert-badge aws-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.415-.287-.806-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167z"/></svg>
+                </div>
+                <div class="cert-info">
+                    <span class="cert-name">AWS Certified Solutions Architect – Associate</span>
+                    <span class="cert-year">2019</span>
+                </div>
+            </div>
+            <div class="cert-item cert-aws">
+                <div class="cert-badge aws-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.415-.287-.806-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167z"/></svg>
+                </div>
+                <div class="cert-info">
+                    <span class="cert-name">AWS Certified Cloud Practitioner</span>
+                    <span class="cert-year">2019</span>
+                </div>
+            </div>
+            <div class="cert-item cert-redhat">
+                <div class="cert-badge redhat-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.009 13.386c1.577 0 3.86-.326 3.86-2.202a1.765 1.765 0 0 0-.04-.431l-.94-4.08c-.216-.898-.406-1.305-1.982-2.093C15.882 4.003 13.104 3 12.11 3c-.93 0-1.2.593-1.833.593-.618 0-1.075-.499-1.833-.499-.727 0-1.51.383-1.99.977-.676.838-1.166 2.142-1.166 2.142l-1.028 4.454a2.1 2.1 0 0 0-.06.493c0 2.053 4.18 2.226 5.927 2.226h.018zm3.378.648c.218.9.218 1.032.218 1.156 0 1.765-2.124 2.81-4.915 2.81H12.14c-3.99 0-8.14-.78-8.14-3.477a3.236 3.236 0 0 1 .218-1.14c-1.678.127-2.218.78-2.218 1.625 0 2.186 4.844 4.992 12.054 4.992 5.66 0 8.771-1.961 8.771-4.003 0-1.124-.775-1.746-1.438-1.963z"/></svg>
+                </div>
+                <div class="cert-info">
+                    <span class="cert-name">RHCSA (Red Hat) — 100%</span>
+                    <span class="cert-year">2012</span>
+                </div>
+            </div>
+            <div class="cert-item cert-oracle">
+                <div class="cert-badge oracle-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.071 9.586h9.858a2.414 2.414 0 1 1 0 4.828H7.07a2.414 2.414 0 1 1 0-4.828m0 6.685h9.858a4.271 4.271 0 0 0 0-8.542H7.07a4.271 4.271 0 0 0 0 8.542"/></svg>
+                </div>
+                <div class="cert-info">
+                    <span class="cert-name">OCA Java Programmer (Oracle)</span>
+                    <span class="cert-year">2010</span>
+                </div>
+            </div>
+            <div class="cert-item cert-oracle">
+                <div class="cert-badge oracle-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.071 9.586h9.858a2.414 2.414 0 1 1 0 4.828H7.07a2.414 2.414 0 1 1 0-4.828m0 6.685h9.858a4.271 4.271 0 0 0 0-8.542H7.07a4.271 4.271 0 0 0 0 8.542"/></svg>
+                </div>
+                <div class="cert-info">
+                    <span class="cert-name">SCWCD (Sun/Oracle Web Component)</span>
+                    <span class="cert-year">2008</span>
+                </div>
+            </div>
+            <div class="cert-item cert-oracle">
+                <div class="cert-badge oracle-badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M7.071 9.586h9.858a2.414 2.414 0 1 1 0 4.828H7.07a2.414 2.414 0 1 1 0-4.828m0 6.685h9.858a4.271 4.271 0 0 0 0-8.542H7.07a4.271 4.271 0 0 0 0 8.542"/></svg>
+                </div>
+                <div class="cert-info">
+                    <span class="cert-name">SCJP (Sun/Oracle Java Programmer)</span>
+                    <span class="cert-year">2007</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Experience -->
+    <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+        
+        <!-- LIMITLESS -->
+        <div class="job company-block">
+            <div class="job-header">
+                <span class="job-title">Technical Architect</span>
+                <span class="job-date">May 2017 – Present (8+ Years)</span>
+            </div>
+            <div class="job-company">Limitless Technology (limitlesstech.com) — Unilever-backed UK Startup | Remote</div>
+            <div class="job-progression">Progression: Senior Platform Developer → Lead Platform Developer → Technical Architect</div>
+            
+            <div class="role-section">
+                <h4>Platform Ownership & Architecture</h4>
+                <ul class="job-achievements">
+                    <li><strong>Scaled platform to 40,000+ users</strong> processing millions of requests from businesses worldwide with <strong>99.99% uptime</strong></li>
+                    <li><strong>Full platform ownership</strong> — sole architect responsible for technical direction, system design, and long-term scalability of the entire product</li>
+                    <li><strong>Designed high-throughput event streaming pipelines</strong> using DynamoDB Streams, Lambda triggers, and SQS for real-time data processing at scale</li>
+                    <li><strong>Built serverless microservices architecture from scratch</strong> — established foundational patterns, coding standards, and best practices still in use today</li>
+                </ul>
+            </div>
+            
+            <div class="role-section">
+                <h4>Cost Optimization & Performance</h4>
+                <ul class="job-achievements">
+                    <li><strong>Led cloud cost optimization initiatives</strong> — built custom tooling to analyze over/under-provisioned resources, identified waste, and reduced AWS spend significantly</li>
+                    <li><strong>Optimized Lambda concurrency and DynamoDB capacity</strong> — tuned provisioned vs on-demand capacity, implemented auto-scaling strategies</li>
+                    <li><strong>Data warehouse optimization</strong> — query tuning, efficient indexing, cost-effective storage tiering, and archive strategies</li>
+                </ul>
+            </div>
+            
+            <div class="role-section">
+                <h4>Security Architecture</h4>
+                <ul class="job-achievements">
+                    <li><strong>Led penetration testing and security audits</strong> — identified vulnerabilities, implemented fixes, maintained platform security posture</li>
+                    <li><strong>Designed secure API architecture</strong> with Cognito authentication, OAuth 2.0 flows, and fine-grained IAM policies</li>
+                    <li><strong>Implemented secrets management</strong> using AWS Secrets Manager with automatic rotation</li>
+                    <li><strong>Established security best practices</strong> — least privilege access, encryption at rest/transit, VPC configurations</li>
+                </ul>
+            </div>
+            
+            <div class="role-section">
+                <h4>Self-Healing & Reliability</h4>
+                <ul class="job-achievements">
+                    <li><strong>Architected self-healing systems</strong> with automatic failure detection, recovery mechanisms, and graceful degradation</li>
+                    <li><strong>Built data integrity repair scripts</strong> — automated tools to detect and fix data inconsistencies across distributed systems</li>
+                    <li><strong>Implemented comprehensive monitoring</strong> with X-Ray tracing, CloudWatch alarms, and proactive alerting for anomaly detection</li>
+                    <li><strong>Production support ownership</strong> — first responder for P1 incidents, root cause analysis, and post-mortem improvements</li>
+                </ul>
+            </div>
+            
+            <div class="role-section">
+                <h4>Engineering Leadership & DevOps</h4>
+                <ul class="job-achievements">
+                    <li><strong>Led distributed engineering team remotely</strong> — mentored engineers, conducted code reviews, and fostered high-performance culture</li>
+                    <li><strong>Established coding standards and testing benchmarks</strong> — defined testing strategies, reviewed test cases, enforced quality gates</li>
+                    <li><strong>Built E2E CI/CD pipelines</strong> with CodeCommit, CodeBuild, CodeDeploy — achieving zero-touch deployments</li>
+                    <li><strong>Infrastructure as Code</strong> — all resources managed via CloudFormation for reproducibility and version control</li>
+                    <li><strong>Third-party integrations</strong> — built connectors for client CRM systems and external APIs</li>
+                </ul>
+            </div>
+            
+            <span class="job-tech">AWS Lambda • API Gateway • GraphQL/AppSync • DynamoDB • DynamoDB Streams • Cognito • Step Functions • SQS • SNS • S3 • CloudFormation • CodePipeline • X-Ray • Node.js</span>
+        </div>
+        
+        <!-- GATEWAY TECHNOLABS -->
+        <div class="job company-block">
+            <div class="job-header">
+                <span class="job-title">Technical Lead</span>
+                <span class="job-date">Sep 2015 – May 2017</span>
+            </div>
+            <div class="job-company">Gateway Technolabs, Ahmedabad</div>
+            
+            <div class="role-section">
+                <h4>Client: ZKTeco — World's Largest Biometric Device Manufacturer | Onsite + Remote (USA)</h4>
+                <ul class="job-achievements">
+                    <li><strong>Re-architected monolithic application to SaaS-ready cloud solution</strong> — enabled multi-tenant deployment and horizontal scaling</li>
+                    <li><strong>Designed cloud migration strategy</strong> — assessed on-premises infrastructure, created phased migration plan to AWS</li>
+                    <li><strong>Database optimization</strong> — restructured schemas for multi-tenancy, improved query performance</li>
+                </ul>
+                <span class="job-tech">Java • MySQL • iBatis • Spring • JSF • AWS IaaS</span>
+            </div>
+            
+            <div class="role-section" style="margin-top: 12px;">
+                <h4>Client: Limitless — Greenfield Platform Development | Remote</h4>
+                <ul class="job-achievements">
+                    <li><strong>Co-architected the entire Limitless platform from scratch</strong> — designed serverless foundation that scaled to production</li>
+                    <li><strong>Established architectural patterns</strong> — API design, data modeling, error handling conventions</li>
+                </ul>
+                <span class="job-tech">AWS Lambda • API Gateway • DynamoDB • Cognito • Serverless • Node.js</span>
+            </div>
+        </div>
+        
+        <!-- SBSC / WALMART -->
+        <div class="job company-block">
+            <div class="job-header">
+                <span class="job-title">Software Developer / Deployment Lead</span>
+                <span class="job-date">Sep 2013 – Sep 2015</span>
+            </div>
+            <div class="job-company">SBSC (sbsc.com) — Client: Walmart | Onsite + Remote (USA)</div>
+            <ul class="job-achievements">
+                <li><strong>Led software deployments to 6,000+ retail stores</strong> across multiple geographic regions with zero-downtime rollout strategy</li>
+                <li><strong>Designed deployment automation</strong> — reduced manual intervention, improved release reliability</li>
+                <li><strong>Refactored legacy applications</strong> — improved code maintainability, performance, and test coverage</li>
+                <li><strong>Cross-functional collaboration</strong> — worked with operations, QA, and business teams for smooth releases</li>
+            </ul>
+            <span class="job-tech">Java • REST API • MySQL • Hibernate • Spring • Deployment Automation</span>
+        </div>
+        
+        <!-- TBS -->
+        <div class="job company-block">
+            <div class="job-header">
+                <span class="job-title">Software Developer</span>
+                <span class="job-date">Nov 2012 – Jul 2013</span>
+            </div>
+            <div class="job-company">TBS (technologyblueprint.co.uk) — Product: Propco</div>
+            <ul class="job-achievements">
+                <li><strong>Built mobile application from early stage</strong> — developed UI components and RESTful backend services</li>
+                <li><strong>API design</strong> — created clean REST endpoints for mobile consumption</li>
+            </ul>
+            <span class="job-tech">Java • EJB • jQuery Mobile • MySQL • REST API</span>
+        </div>
+        
+        <!-- NIIT -->
+        <div class="job company-block">
+            <div class="job-header">
+                <span class="job-title">Trainer / Software Developer</span>
+                <span class="job-date">Oct 2010 – Nov 2012</span>
+            </div>
+            <div class="job-company">NIIT Technologies — Onsite (Bhutan), Sherubtse College</div>
+            <div class="job-client">Project: Chiphen Rigpel — National IT Literacy Initiative (Funded by Indian Govt.)</div>
+            <ul class="job-achievements">
+                <li><strong>Developed 4 custom learning and utility tools</strong> — adopted by college students, professors, and citizens across Bhutan</li>
+                <li><strong>Technical training</strong> — conducted classes for graduation students, accelerating IT literacy nationwide</li>
+                <li><strong>Full ownership</strong> — requirements gathering, design, development, and deployment</li>
+            </ul>
+            <span class="job-tech">Java • MySQL • Java Swing • JFC • Java 2D</span>
+        </div>
+        
+        <!-- EARLY CAREER -->
+        <div class="job company-block">
+            <div class="job-header">
+                <span class="job-title">Software Programmer</span>
+                <span class="job-date">Jun 2008 – Oct 2010</span>
+            </div>
+            <div class="job-company">Futura Softech Solutions & Sunbios Software Development, Gurgaon/Ghaziabad</div>
+            <ul class="job-achievements">
+                <li><strong>Built Java web applications</strong> — developed strong fundamentals in server-side development, database design, and web technologies</li>
+            </ul>
+            <span class="job-tech">Java • JDBC • MySQL • JSP • Servlets</span>
+        </div>
+    </section>
+    
+    <!-- Skills -->
+    <section class="section">
+        <h2 class="section-title">Technical Skills</h2>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h4>Languages & Frameworks</h4>
+                <div class="skill-list">
+                    <span class="skill-tag">JavaScript (8+ yrs)</span>
+                    <span class="skill-tag">Python (2+ yrs)</span>
+                    <span class="skill-tag">Java (8+ yrs)</span>
+                    <span class="skill-tag">Node.js (8+ yrs)</span>
+                    <span class="skill-tag">Spring</span>
+                    <span class="skill-tag">Hibernate</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Databases</h4>
+                <div class="skill-list">
+                    <span class="skill-tag">DynamoDB (5+ yrs)</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">NoSQL Design</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>Architecture & APIs</h4>
+                <div class="skill-list">
+                    <span class="skill-tag">Serverless (5+ yrs)</span>
+                    <span class="skill-tag">Microservices</span>
+                    <span class="skill-tag">REST API</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">Event-Driven</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h4>DevOps & Quality</h4>
+                <div class="skill-list">
+                    <span class="skill-tag">CI/CD Pipelines</span>
+                    <span class="skill-tag">Infrastructure as Code</span>
+                    <span class="skill-tag">Agentic Development</span>
+                    <span class="skill-tag">Testing Strategy</span>
+                    <span class="skill-tag">Code Review</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="aws-services">
+            <h4>☁️ AWS Services — SDK-Level Production Implementation</h4>
+            <p>
+                <strong>Compute:</strong> Lambda, ECS, EC2 &nbsp;|&nbsp;
+                <strong>Storage:</strong> S3, DynamoDB, RDS &nbsp;|&nbsp;
+                <strong>API:</strong> API Gateway, AppSync/GraphQL &nbsp;|&nbsp;
+                <strong>Security:</strong> IAM, Cognito, Secrets Manager &nbsp;|&nbsp;
+                <strong>DevOps:</strong> CodeCommit, CodeBuild, CodeDeploy, CloudFormation &nbsp;|&nbsp;
+                <strong>Messaging:</strong> SNS, SQS, SES, IoT Core &nbsp;|&nbsp;
+                <strong>Monitoring:</strong> X-Ray, CloudWatch &nbsp;|&nbsp;
+                <strong>Other:</strong> CloudFront, Step Functions, DynamoDB Streams, Rekognition
+            </p>
+        </div>
+    </section>
+    
+    <!-- Education -->
+    <section class="section">
+        <h2 class="section-title">Education</h2>
+        <div class="edu-item">
+            <div>
+                <div class="edu-degree">GNIIT – Software Engineering</div>
+                <div class="edu-school">NIIT South Ex, Delhi</div>
+            </div>
+            <span class="edu-year">2008</span>
+        </div>
+        <div class="edu-item">
+            <div>
+                <div class="edu-degree">Bachelor of Arts (BA)</div>
+                <div class="edu-school">Magadh University, Bihar</div>
+            </div>
+            <span class="edu-year">2005</span>
+        </div>
+        <div class="edu-item">
+            <div>
+                <div class="edu-degree">10+2 I.Sc (Science)</div>
+                <div class="edu-school">Bihar Intermediate Education Council</div>
+            </div>
+            <span class="edu-year">2001</span>
+        </div>
+    </section>
+    
+    <!-- Beyond Work -->
+    <section class="section">
+        <h2 class="section-title">Beyond Work</h2>
+        <div class="beyond-work">
+            <p>Outside of technology, I find balance through road trips, outdoor walks, fitness, and music. I believe in continuous exploration — both in code and in life — which keeps me curious, energized, and grounded.</p>
+        </div>
+    </section>
+</body>
+</html>
